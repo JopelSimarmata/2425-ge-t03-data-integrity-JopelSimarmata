@@ -10,7 +10,8 @@ public class Enrollment {
     String TahunAjaran;
     String Semester;
     String nilai = "None";
-    Boolean cek = false;
+    Boolean cek_s = false;
+    Boolean cek_c = false;
 
 
     Student student;
@@ -43,12 +44,20 @@ public class Enrollment {
         this.student = student;
     }
 
-    public void cekValid(Boolean cek){
-        this.cek = cek;
+    public void setValidCourse(Boolean cek){
+        this.cek_c = cek;
     }
 
-    public Boolean getValid(){
-        return this.cek;
+    public void setValidStudent(Boolean cek){
+        this.cek_s = cek;
+    }
+
+    public Boolean getValidCourse(){
+        return this.cek_c;
+    }
+
+    public Boolean getValidStudent(){
+        return this.cek_s;
     }
 
     public void DisplayEnrollment(){
@@ -59,6 +68,7 @@ public class Enrollment {
     public void setStudents(Student student){
         this.student = student;
     }
+
 
 
 

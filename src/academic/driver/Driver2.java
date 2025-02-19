@@ -29,7 +29,6 @@ public class Driver2 {
             String[] splitCommand = command.split("#");
             String commandType = splitCommand[0];
             
-            try {
                 switch (commandType) {
                     case "course-add":
                         daftarMataKuliah.add(new Course(splitCommand[1], splitCommand[2], splitCommand[3], splitCommand[4]));
@@ -58,9 +57,6 @@ public class Driver2 {
                         daftarEnrollments.add(new Enrollment(courseCode, studentNim, splitCommand[3], splitCommand[4]));
                         break;
                 }
-            } catch (ArrayIndexOutOfBoundsException esdsa) {
-                System.out.println("Invalid input format");
-            }
         }
         
         // Cetak data
